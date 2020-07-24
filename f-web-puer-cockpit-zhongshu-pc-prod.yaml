@@ -41,5 +41,5 @@ spec:
   type: NodePort
   ports:
     - port: 7777
-      nodePort: 39001
+      nodePort: 39007
     web: f-web-puer-cockpit-zhongshu-pc-prod
