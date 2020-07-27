@@ -23,9 +23,9 @@ spec:
         - containerPort: 7777
         env:
         - name: M_API_SITE
-          # value: ""
+          value: ""
         - name: WEBAPI_AUTH_HOST
-          # value: ""
+          value: ""
       imagePullSecrets:
       - name: puer
 
