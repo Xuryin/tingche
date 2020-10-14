@@ -9,7 +9,8 @@ import {
 import Framework from './layouts/framework'
 import Auth from '@/components/auth/auth'
 
-import Hello from './pages/hello'
+import {Index} from './pages'
+
 
 
 
@@ -22,9 +23,7 @@ export default class App extends Component {
         <Router>
           <Framework>
             <Switch>
-              <Route excat path={'/hello'} component={Hello} />
-              <Redirect exact from={'/'} to={'/hello'} />
-              <div>nihaoa </div>
+              <Route excat path={'/'} component={Index} />
               <Route render={() => <div className="FBV FBAC FBJC" style={{fontSize: 100}}>404</div>} />
             </Switch>
           </Framework>
