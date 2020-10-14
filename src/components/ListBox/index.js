@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {Component}from 'react';
 import { ContentBox } from '../index'
 
-const ListBox = (props) => {
-  const {data, isFirstOpen, className} = props;
-  const [openItems, setOpenItems] = useState([]);
+class ListBox extends Component {
+  constructor (props) {
+    super (props)
+    this.state = {
 
+    }
 
-  const onClickItem = (index) => {
+  }
+
+  onClickItem = (index) => {
     const openItemsCopy = openItems.concat([]);
 
     let i = openItemsCopy.indexOf(index);
@@ -18,28 +22,36 @@ const ListBox = (props) => {
     setOpenItems(openItemsCopy)
   }
 
-  return (
-    <ContentBox className={className}>
-      {
-        (data || []).length === 0 ? <Empty/> : null
-      }
-      {
-        (data || []).map((item, index) => {
-          return (
-            <DataItem
-              onClick={() => {
-                onClickItem(index)
-              }}
-              active={(index === 0 && isFirstOpen) ? true : openItems.indexOf(index) > -1}
-              data={item}
-              isLink={(index === 0 && isFirstOpen) ? false : true}
-            />
-          )
-        })
-      }
 
-    </ContentBox>
-  );
+  render () {
+    const {data, isFirstOpen, className} = props;
+    const [openItems, setOpenItems] = this.state
+    return (
+      <ContentBox className={className}>
+        {
+          (data || []).length === 0 ? <Empty/> : null
+        }
+        {
+          (data || []).map((item, index) => {
+            return (
+              <DataItem
+                onClick={() => {
+                  this.onClickItem(index)
+                }}
+                active={(index === 0 && isFirstOpen) ? true : openItems.indexOf(index) > -1}
+                data={item}
+                isLink={(index === 0 && isFirstOpen) ? false : true}
+              />
+            )
+          })
+        }
+
+      </ContentBox>
+    );
+  }
+
+
+
 }
 
 export default ListBox

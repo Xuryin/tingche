@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {getUUID, px2spx} from "../../../utils/func";
+import {getUUID, px2spx} from "../../utils/func";
 import echarts from 'echarts/lib/echarts'
 
 import './index.styl';

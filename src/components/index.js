@@ -6,6 +6,6 @@ import Header from './Header';
 import ListBox from './ListBox';
 import Quota from './Quota';
 import HeaderTitle from './HeaderTitle';
-import HeaderText from './Quota';
+import HeaderText from './HeaderText';
 
 export { Line, Pie, ContentBox, Empty, Header, ListBox, Quota, HeaderTitle, HeaderText  }

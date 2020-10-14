@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="46px" viewBox="0 0 229 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>合并形状</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="49.4889506%" x2="97.3793013%" y2="50.6031447%" id="linearGradient-1">
+            <stop stop-color="#1387FE" offset="0%"></stop>
+            <stop stop-color="#3897F9" offset="22.6253874%"></stop>
+            <stop stop-color="#4A88F9" offset="36.4227026%"></stop>
+            <stop stop-color="#4EA1F9" offset="78.7307217%"></stop>
+            <stop stop-color="#1387FE" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 0.8 0 31.5247405 9.02630828 44.8 228 44.8 228 0.8"></polygon>
+    </defs>
+    <g id="创文驾驶舱" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="创文系统收起" transform="translate(-30.000000, -526.000000)">
+            <g id="分组-13备份-3" transform="translate(30.000000, 526.000000)">
+                <g id="分组-7">
+                    <path d="M230,0 L230,44.799 L455,44.8 L455,45.8 L230,45.799 L230,46 L0,46 L0,13.8217122 L9.63134766,0 L230,0 Z M229,1 L10.0263083,1 L1,13.973549 L1,44 L229,44 L229,1 Z" id="合并形状" fill="url(#linearGradient-1)"></path>
+                    <g id="合并形状" transform="translate(1.000000, 0.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Mask" fill="#051D5C" fill-rule="nonzero" opacity="0.60219029" transform="translate(114.000000, 22.800000) scale(1, -1) translate(-114.000000, -22.800000) " xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

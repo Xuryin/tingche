@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import {getUUID, px2spx} from "../../../utils/func";
-import echarts from 'echarts/lib/echarts'
+import {getUUID, px2spx} from "../../utils/func";
+import echarts from '../../utils/echarts'
 import { Empty } from '@/components';
 
 import './index.styl';
