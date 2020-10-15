@@ -207,13 +207,10 @@ class Index extends Component {
 
         <div class="stopping-center">
           {/*地图*/}
-          <div className='center-map'>
-            <WebMap />
-          </div>
-        <div class="ml-20">
 
           <ContentBox className='middle-map-content'>
             {/*地图*/}
+            <WebMap />
           </ContentBox>
 
 
@@ -231,13 +228,13 @@ class Index extends Component {
         {/*右边部分*/}
 
         <div className="ml-20">
-            <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time'>
-              {/*<ListBox/>*/}
-            </ContentBox>
+          <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time'>
+            {/*<ListBox/>*/}
+          </ContentBox>
 
-            <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-duration mt-20'>
+          <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-duration mt-20'>
 
-            </ContentBox>
+          </ContentBox>
 
 
         </div>
