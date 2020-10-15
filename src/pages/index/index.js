@@ -90,48 +90,6 @@ class Index extends Component {
         total: "",
         ds_list: []
       },
-      pieData: [
-        {
-          update_cycle: "年",
-          total: "20%",
-          areaCode: "普洱市",
-          m_unit: "个",
-          cw_type: "全市新时代文明实践所个数",
-          indicatorCycle: "20191231",
-        },
-        {
-          update_cycle: "年",
-          total: "10%",
-          areaCode: "普洱市",
-          m_unit: "个",
-          cw_type: "全市新时代文明实践中心个数",
-          indicatorCycle: "20191231",
-        },
-        {
-          update_cycle: "年",
-          total: "15%",
-          areaCode: "普洱市",
-          m_unit: "个",
-          cw_type: "全市新时代文明实践站个数",
-          indicatorCycle: "20191231",
-        },
-        {
-          update_cycle: "年",
-          total: "20%",
-          areaCode: "普洱市",
-          m_unit: "个",
-          cw_type: "全市新时代文明实践站个数",
-          indicatorCycle: "20191231",
-        },
-        {
-          update_cycle: "年",
-          total: "35%",
-          areaCode: "普洱市",
-          m_unit: "个",
-          cw_type: "全市新时代文明实践站个数",
-          indicatorCycle: "20191231",
-        }
-      ]
     }
 
   }
@@ -301,6 +259,14 @@ class Index extends Component {
                 <span>停车场总车位数</span>
                 <span>1000</span>
               </div>
+              <div className="statistics-content-item">
+                <span>停车场总车位数</span>
+                <span>1000</span>
+              </div>
+              <div className="statistics-content-item">
+                <span>停车场总车位数</span>
+                <span>1000</span>
+              </div>
             </ContentBox>
           </div>
 
@@ -308,7 +274,7 @@ class Index extends Component {
 
           <div className='stopping-left-center'>
             <HeaderText text="导流指示牌"/>
-            <ContentBox className='top-statistics-content'>
+            <ContentBox className='center-statistics-content'>
               {/*listbox*/}
             </ContentBox>
           </div>
@@ -319,7 +285,7 @@ class Index extends Component {
             <HeaderText text="停车时长区间统计"/>
             <ContentBox className='bottom-pie'>
               <span>停车时长（单位：小时）</span>
-              <Pie className="" data={this.state.pieData}/>
+              <Pie />
             </ContentBox>
           </div>
         </div>

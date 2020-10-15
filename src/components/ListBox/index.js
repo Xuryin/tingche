@@ -49,9 +49,6 @@ class ListBox extends Component {
       </ContentBox>
     );
   }
-
-
-
 }
 
 export default ListBox

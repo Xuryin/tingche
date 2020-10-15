@@ -10,23 +10,38 @@
 
 /*停车场使用统计*/
 .stopping-left
-  width 433px
+  width 500px
   border 1px solid white
 
-.top-statistics-content
-  width 300px
-  border 1px solid white
-  display flex
-  flex-direction row
-  justify-content center
-  align-items center
+  .stopping-left-top
+    width 433px
+    height 280px
 
-  .statistics-content-item
-    width 50%
+
+  .top-statistics-content
     display flex
-    flex-direction column
-    color white
+    flex-direction row
+    flex-wrap wrap
+    justify-content center
+    align-items center
 
+    >div:nth-child(1), >div:nth-child(2)
+      border 1px solid yellow
+      width 180px
+      height 72px
+
+    >div:nth-child(2)
+      margin-left  20px
+
+    .statistics-content-item
+      width 50%
+      display flex
+      flex-direction column
+      color white
+      border 1px solid yellow
+
+/*左中*/
+.stopping-left-center
 
 
 /*底部pie图*/
