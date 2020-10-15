@@ -152,87 +152,86 @@ class Index extends Component {
         <div className="stopping-left">
 
           {/*左上1*/}
-          <div className="stopping-left-top">
-            <ContentBox className='top-statistics-content' text='交通指数'  childrenClass="content-box-content">
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-              <div className="statistics-content-item">
-                <span>停车场总车位数</span>
-                <span>1000</span>
-              </div>
-            </ContentBox>
-          </div>
+          <ContentBox className='top-statistics-content' text='交通指数'  childrenClass="content-box-content" isShowHeader={true}>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+            <div className="statistics-content-item">
+              <span>1000</span>
+              <span>停车场总车位数</span>
+            </div>
+          </ContentBox>
 
           {/*左中*/}
+          <ContentBox className='center-statistics-content mt-20' text="导流指示牌" isShowHeader={true}>
+            {/*listbox*/}
+          </ContentBox>
 
-          <div className='stopping-left-center'>
-            <ContentBox className='center-statistics-content'>
-              {/*listbox*/}
-            </ContentBox>
-          </div>
 
           {/*左下*/}
+          <ContentBox className='bottom-pie mt-20' isShowHeader={true} text='停车时长区间统计'>
+            <span>停车时长（单位：小时）</span>
+            <Pie />
+          </ContentBox>
 
-          <div className='stopping-left-bottom'>
-            <ContentBox className='bottom-pie'>
-              <span>停车时长（单位：小时）</span>
-              <Pie />
-            </ContentBox>
-          </div>
         </div>
 
 
         {/*中间部分*/}
 
-        <div class="stopping-center">
-          {/*地图*/}
-          <div className='center-map'></div>
+        <div class="ml-20">
+
+          <ContentBox className='middle-map-content'>
+            {/*地图*/}
+          </ContentBox>
+
 
           {/*折线图*/}
-          <div>
-            <ContentBox className="center-line">
-              <div className='center-line-content'>
-                <Line className='center-line-line' data={LineData || {}}/>
-                <Line className='center-line-line' data={LineData || {}}/>
-              </div>
-            </ContentBox>
-          </div>
+          <ContentBox className="center-line mt-20">
+            <div className='center-line-content'>
+              <Line className='center-line-line' data={LineData}/>
+              <Line className='center-line-line' data={LineData}/>
+            </div>
+          </ContentBox>
+
 
 
         </div>
         {/*右边部分*/}
 
-        <div className="stopping-right">
-          <div className="stopping-right-top">
-            <HeaderText text="区域停车次数分布"/>
-            {/*<ListBox/>*/}
-          </div>
+        <div className="ml-20">
+            <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time'>
+              {/*<ListBox/>*/}
+            </ContentBox>
+
+            <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-duration mt-20'>
+
+            </ContentBox>
 
 
         </div>
