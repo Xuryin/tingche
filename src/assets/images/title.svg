@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="234px" height="45px" viewBox="0 0 234 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 4</title>
+    <defs>
+        <linearGradient x1="95.9404839%" y1="3.88997396%" x2="4.70327524%" y2="3.88997396%" id="linearGradient-1">
+            <stop stop-color="#A8BCDE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="49.7693936%"></stop>
+            <stop stop-color="#75A1EC" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-1.1%" y="-90.0%" width="102.3%" height="280.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="95.9404839%" y1="3.88997396%" x2="4.70327524%" y2="3.88997396%" id="linearGradient-3">
+            <stop stop-color="#A8BCDE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="49.7693936%"></stop>
+            <stop stop-color="#75A1EC" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-4">
+            <rect id="矩形" fill="#00E4FF" x="34" y="40" width="166" height="4" rx="2"></rect>
+            <rect id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" filter="url(#filter-2)" x="37" y="41" width="159.012876" height="2"></rect>
+            <path d="M233.208109,0.5 L213.6843,41.5 L206.188237,41.5 L199.300849,36.6351351 L32.2167448,36.6351351 L26.8846746,41.5 L20.3157002,41.5 L0.791890636,0.5 L233.208109,0.5 Z" id="矩形" stroke="#0087D0" fill-opacity="0.192280376" fill="#0186CB"></path>
+            <rect id="矩形备份" fill="url(#linearGradient-3)" fill-rule="nonzero" style="mix-blend-mode: hard-light;" filter="url(#filter-4)" x="37" y="0" width="159.012876" height="1"></rect>
+        </g>
+    </g>
+</svg>
