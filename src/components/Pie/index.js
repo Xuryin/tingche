@@ -11,6 +11,31 @@ const TEXT_MAP = {
   "全市新时代文明实践站个数": "实践站"
 };
 
+const data = [
+  {update_cycle: "年",
+    total: "108",
+    areaCode: "普洱市",
+    m_unit: "个",
+    cw_type: "全市新时代文明实践所个数",
+    indicatorCycle: "20191231"},
+  {
+    update_cycle: "年",
+    total: "10",
+    areaCode: "普洱市",
+    m_unit: "个",
+    cw_type: "全市新时代文明实践中心个数",
+    indicatorCycle: "20191231"
+  },
+  {
+    update_cycle: "年",
+    total: "1059",
+    areaCode: "普洱市",
+    m_unit: "个",
+    cw_type: "全市新时代文明实践站个数",
+    indicatorCycle: "20191231"
+  }
+]
+
 class Pie extends Component {
   constructor(props) {
     super(props);
@@ -140,7 +165,8 @@ class Pie extends Component {
   }
 
   render() {
-    const { className, data } = this.props;
+    const { className } = this.props;
+
 
     return(
       <div id={this.id} className={className}></div>
