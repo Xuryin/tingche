@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Line, Pie, ContentBox, Empty, Header, ListBox, HeaderTitle, HeaderText } from "@/components/"
+import { Line, Pie, ContentBox, Empty, Header, ListBox, HeaderTitle, HeaderText,WebMap } from "@/components/"
 import {getData, getApi} from "@/services/cw";
 import {formatTime} from "../../utils/func";
 
@@ -145,6 +145,7 @@ class Index extends Component {
 
   render () {
     const {data} = this.state;
+    const position = { longitude: 100.964001, latitude: 22.792963 }
     return <div>
       <div className="stopping-page">
 
@@ -203,7 +204,9 @@ class Index extends Component {
 
         <div class="stopping-center">
           {/*地图*/}
-          <div className='center-map'></div>
+          <div className='center-map'>
+            <WebMap />
+          </div>
 
           {/*折线图*/}
           <div>
