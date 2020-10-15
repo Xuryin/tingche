@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="42px" viewBox="0 0 480 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>底部淡出</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="67.0532227%" id="linearGradient-1">
+            <stop stop-color="#063165" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#063165" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.97093564">
+        <g id="停车引导系统3" transform="translate(-1383.000000, -650.000000)" fill="url(#linearGradient-1)" stroke="#29A7F2">
+            <g id="编组-11" transform="translate(1383.000000, 129.000000)">
+                <path d="M479.5,522.156627 L479.5,552.036145 C479.5,556.827048 475.470563,560.710843 470.5,560.710843 L9.5,561.674699 C4.52943725,561.674699 0.5,557.790904 0.5,553 L0.5,521.674699" id="底部淡出"></path>
+            </g>
+        </g>
+    </g>
+</svg>

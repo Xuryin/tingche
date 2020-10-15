@@ -153,8 +153,19 @@ class Index extends Component {
 
           {/*左上1*/}
           <div className="stopping-left-top">
-            <HeaderText text="停车场使用统计"/>
-            <ContentBox className='top-statistics-content'>
+            <ContentBox className='top-statistics-content' text='交通指数'  childrenClass="content-box-content">
+              <div className="statistics-content-item">
+                <span>停车场总车位数</span>
+                <span>1000</span>
+              </div>
+              <div className="statistics-content-item">
+                <span>停车场总车位数</span>
+                <span>1000</span>
+              </div>
+              <div className="statistics-content-item">
+                <span>停车场总车位数</span>
+                <span>1000</span>
+              </div>
               <div className="statistics-content-item">
                 <span>停车场总车位数</span>
                 <span>1000</span>
@@ -181,7 +192,6 @@ class Index extends Component {
           {/*左中*/}
 
           <div className='stopping-left-center'>
-            <HeaderText text="导流指示牌"/>
             <ContentBox className='center-statistics-content'>
               {/*listbox*/}
             </ContentBox>
@@ -190,7 +200,6 @@ class Index extends Component {
           {/*左下*/}
 
           <div className='stopping-left-bottom'>
-            <HeaderText text="停车时长区间统计"/>
             <ContentBox className='bottom-pie'>
               <span>停车时长（单位：小时）</span>
               <Pie />
@@ -207,7 +216,6 @@ class Index extends Component {
 
           {/*折线图*/}
           <div>
-            <HeaderText text=""/>
             <ContentBox className="center-line">
               <div className='center-line-content'>
                 <Line className='center-line-line' data={LineData || {}}/>
