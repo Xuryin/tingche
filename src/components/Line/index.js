@@ -128,7 +128,7 @@ class Line extends Component {
     this.options.series[0].data = yData;
     this.options.xAxis.name = `单位/${xUnit || ''}`;
     this.options.yAxis[0].name = `单位/${yUnit || ''}`;
-    console.log(this.options)
+    // console.log(this.options)
     this.renderLine();
   }
 

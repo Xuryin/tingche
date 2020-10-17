@@ -8,6 +8,7 @@ require("echarts/lib/chart/gauge");
 // 引入提示框和标题组件
 require('echarts/lib/component/tooltip');
 require('echarts/lib/component/title');
+require("echarts/lib/component/legendScroll");
 require("echarts/lib/component/legend");
 require("echarts/lib/component/markPoint");
 
