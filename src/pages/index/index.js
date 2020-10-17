@@ -147,7 +147,7 @@ class Index extends Component {
 
         {/*中间部分*/}
 
-        <div class="stopping-center">
+        <div class="stopping-center ml-20">
           {/*地图*/}
 
           <ContentBox className='middle-map-content'>
@@ -171,7 +171,7 @@ class Index extends Component {
 
         <div className="ml-20">
           <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time'>
-            {/*<ListBox/>*/}
+            <ListBox className='stopping-collapse'/>
           </ContentBox>
 
           <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-duration mt-20'>

@@ -26,6 +26,7 @@ class WebMap extends Component {
 
     return (
       <div className='map-content'>
+        <Map mapStyle={'amap://styles/9664a559418bc440212f0e6871459776'} zoom={13} amapkey={'7f16b9b671454d89e24e566e6db300b9'}>
         <Map mapStyle={'amap://styles/9664a559418bc440212f0e6871459776'} zoom={15} amapkey={'7f16b9b671454d89e24e566e6db300b9'}>
           {markerList.map((item, index) => {
             return <Marker position={item.position} icon={item.icon} label={item.label}/>
