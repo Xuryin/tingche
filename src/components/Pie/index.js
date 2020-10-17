@@ -5,116 +5,49 @@ import { Empty } from '@/components';
 
 import './index.styl';
 
-const TEXT_MAP = {
-  "全市新时代文明实践中心个数": "实践中心",
-  "全市新时代文明实践所个数": "实践所",
-  "全市新时代文明实践站个数": "实践站"
-};
-
-const data = [
-  {update_cycle: "年",
-    total: "108",
-    areaCode: "普洱市",
-    m_unit: "个",
-    cw_type: "全市新时代文明实践所个数",
-    indicatorCycle: "20191231"},
-  {
-    update_cycle: "年",
-    total: "10",
-    areaCode: "普洱市",
-    m_unit: "个",
-    cw_type: "全市新时代文明实践中心个数",
-    indicatorCycle: "20191231"
-  },
-  {
-    update_cycle: "年",
-    total: "1059",
-    areaCode: "普洱市",
-    m_unit: "个",
-    cw_type: "全市新时代文明实践站个数",
-    indicatorCycle: "20191231"
-  }
-]
-
 class Pie extends Component {
   constructor(props) {
     super(props);
 
     this.id = 'gauge' + getUUID();
     this.options = {
+      title:{
+        text: '停车时长（单位：小时）',
+        left: 'center',
+        top: 10,
+        textStyle: {
+          fontSize: 12,
+          color: '#FFFFFF'
+        }
+      },
       tooltip: {
         trigger: 'item',
-        formatter: '{b}: {c} ({d}%)'
-      },
-      grid: {
-        bottom: '20%',   
-        containLabel: true
+        formatter: '{c}%'
       },
       legend: {
-        orient: 'vertical',
-        left: 'center',
-        bottom: 'bottom',
-        itemHeight: px2spx(12),     // 圆圈大小
-        itemWidth: px2spx(12),
-        itemGap: px2spx(37),   // 间距
-        padding: [40, 0, 0, 0],
+        icon: 'circle',
+        bottom: 0,
+        itemWidth: 10,
+        itemGap: 5,
         textStyle: {
-          fontFamily: "HiraginoSansGB-W3",
-          fontSize: px2spx(14),
-          color: "#C9CCF1"
-        },
-        data: []
-        /**
-         * {
-          name: '实践站',
-          icon: "circle"
+          fontWeight: 100,
+          fontSize: 10,
+          color: '#303d62'
         }
-        */
       },
-      
       series: [
         {
-          name: '',
+          name: '姓名',
           type: 'pie',
-          radius: ['50%', '70%'],
-          avoidLabelOverlap: false,
-          silent: false,   // 是否有鼠标交互
+          radius: '55%',
           label: {
-            // normal: {
-            //   show: true,
-            //   formatter: "{d}个",
-            //   textStyle: {
-            //     fontSize: px2spx(14),
-            //     color: "#fff"
-            //   },
-            // },
+            show: false
           },
-          labelLine: {  // 线的样式
-            normal: {
-              lineStyle: {
-                color: 'rgba(255, 255, 255, 0.3)'
-              },
-              smooth: 0.8,
-              length: px2spx(10),
-            }
-          },
-          data: [],
-          hoverOffset: 2,
-          // {value: 335, name: '实践站'}
           emphasis: {
             itemStyle: {
               shadowBlur: 10,
               shadowOffsetX: 0,
               shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-          },
-          itemStyle: {
-            normal: {
-              // 设置饼图的颜色
-              color: function(params){
-                let colors = ['#19D6FF', '#F1D43B', '#F2845F'];
-                return colors[params.dataIndex];
-              }
             },
           }
         }
@@ -122,45 +55,21 @@ class Pie extends Component {
     };
   }
 
-  init = (data) => {
-    if(data && data.length > 0) {
-      let legendData = [], pieData = [], m_unit = data[0].m_unit;
+  init = () =>{
 
-      data.forEach(item => {
-        legendData.push({
-          name: TEXT_MAP[item.cw_type] || '-',
-          icon: 'circle'
-        });
-
-        pieData.push({
-          name: TEXT_MAP[item.cw_type] || '-',
-          value: item.total
-        });
-      });
-
-      this.options.legend.data = legendData;
-      this.options.series[0].data = pieData;
-      this.options.series[0].label = {
-        normal: {
-          show: true,
-          formatter: (data) => {
-            // `{c}${m_unit}`
-            return data.name + data.value + m_unit
-          },
-          textStyle: {
-            fontSize: px2spx(14),
-            color: "#fff"
-          },
-        },
-      };
-
-
-      this.renderPie();
-    }
+    this.options.series[0].data = [
+      {name:'0-0.5',value:5},
+      {name:'0.5-1.5',value:38},
+      {name:'1.5-3',value:10},
+      {name:'3-5',value:45},
+      {name:'5以上',value:23}
+    ]
+    this.options.legend.data = ['0-0.5','0.5-1.5','1.5-3','3-5','5以上']
+    console.log(this.options)
+    this.renderPie();
   }
 
   renderPie = () => {
-
     this.pieChart && this.pieChart.setOption(this.options);
   }
 
@@ -169,20 +78,25 @@ class Pie extends Component {
 
 
     return(
-      <div id={this.id} className={className}></div>
+      <div id={this.id} className={className} style={{width:'250px',height:'150px'}}></div>
     );
   }
 
   componentDidMount() {
-    this.pieChart = echarts.init(document.getElementById(this.id));
-
-    this.init(this.props.data);
+    // 基于准备好的dom，初始化echarts实例
+    this.pieChart = echarts.getInstanceByDom(document.getElementById(this.id));
+    if( this.pieChart === undefined){
+      this.pieChart = echarts.init(document.getElementById(this.id));
+    }
+    // this.init(this.props.data);
+    this.init();
   }
 
   componentWillReceiveProps(nextProps) {
     const { data } = nextProps;
 
-    this.init(data);
+    // this.init(data);
+    this.init();
   }
 }
 
