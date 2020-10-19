@@ -8,5 +8,6 @@ import ListBox from './ListBox';
 import Quota from './Quota';
 import HeaderTitle from './HeaderTitle';
 import HeaderText from './HeaderText';
+import Collapse from './Collapse';
 
-export {WebMap, Line, Pie, ContentBox, Empty, Header, ListBox, Quota, HeaderTitle, HeaderText  }
+export {WebMap, Line, Pie, ContentBox, Empty, Header, ListBox, Quota, HeaderTitle, HeaderText, Collapse  }

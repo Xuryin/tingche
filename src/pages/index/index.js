@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Line, Pie, ContentBox, Empty, Header, ListBox, HeaderTitle, HeaderText,WebMap } from "@/components/"
+import { Line, Pie, ContentBox, Empty, Header, ListBox, HeaderTitle, HeaderText,WebMap, Collapse } from "@/components/"
 import {getData, getApi} from "@/services/cw";
 import {formatTime} from "../../utils/func";
 
@@ -138,9 +138,7 @@ class Index extends Component {
 
           {/*左中*/}
           <ContentBox className='center-statistics-content mt-20' text="导流指示牌" isShowHeader={true} childrenClass='center-collapse'>
-            <ListBox className='statistics-collapse' data={StoppingTime}>
-              <div childrenClass='stopping-collapse-children'></div>
-            </ListBox>
+            <Collapse className='statistics-collapse' data={StoppingTime}/>
           </ContentBox>
 
 

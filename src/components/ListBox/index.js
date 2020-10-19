@@ -29,6 +29,7 @@ class ListBox extends Component {
     )
   }
 
+
   onChange = (index) => {
     console.log(index)
     this.setState({isActive: index})
@@ -36,17 +37,14 @@ class ListBox extends Component {
 
 
   render () {
+
     const { isActive } = this.state
-    const { data, headerClass, isShowIndex } = this.props
+    const { data, headerClass, isShowIndex, position } = this.props
+
     return (
       data.map((item, index) => (
         <div className="collapse">
-          <div className={ headerClass } onClick={() => this.onChange(index)}>
-            {isShowIndex?<span>{ index }</span>:null}
-            <span>{item.title}</span>
-            <span>{item.extra}</span>
-          </div>
-          {isActive == index ?<content data={item.content}/> : null}
+
         </div>
       ))
 
