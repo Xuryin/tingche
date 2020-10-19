@@ -44,6 +44,12 @@ const LineData  = [
   }
 ]
 
+const StoppingTime = [
+  {title: '导流指示牌', content: '1.A1001,普洱市向东50米'},
+  {title: '故障树', content: '1.A1001,普洱市向东50米'},
+  {title: '导流指示牌', content: '1.A1001,普洱市向东50米'},
+]
+
 class Index extends Component {
   constructor(props) {
     super(props)
@@ -131,8 +137,10 @@ class Index extends Component {
           </ContentBox>
 
           {/*左中*/}
-          <ContentBox className='center-statistics-content mt-20' text="导流指示牌" isShowHeader={true}>
-            {/*listbox*/}
+          <ContentBox className='center-statistics-content mt-20' text="导流指示牌" isShowHeader={true} childrenClass='center-collapse'>
+            <ListBox className='statistics-collapse' data={StoppingTime}>
+              <div childrenClass='stopping-collapse-children'></div>
+            </ListBox>
           </ContentBox>
 
 
@@ -163,15 +171,15 @@ class Index extends Component {
               <Line className='center-line-line' data={LineData}/>
             </div>
           </ContentBox>
-
-
-
         </div>
+
+
         {/*右边部分*/}
 
         <div className="ml-20">
-          <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time'>
-            <ListBox className='stopping-collapse'/>
+          <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-time' childrenClass='right-collapse'>
+            <ListBox className='stopping-collapse' data={StoppingTime} >
+            </ListBox>
           </ContentBox>
 
           <ContentBox text="区域停车次数分布" isShowHeader={true} className='right-stopping-duration mt-20'>

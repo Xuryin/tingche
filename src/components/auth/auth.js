@@ -18,7 +18,7 @@ class Authorized extends PureComponent {
 
   componentDidMount () {
     const COCKPIT_ID = "swzzb-1251-pc"
-    let token = 'f465efc24740be414534de715460d6e9'
+    let token = '43ac6e0c5e3862ed4f17964c46f8b185'
     if (/token=([0-9a-zA-Z]+)/.test(location.href)) {
       token = RegExp.$1
     }
@@ -27,7 +27,7 @@ class Authorized extends PureComponent {
     }
     window["FUPIN_AREACODE"] = window["FUPIN_AREACODE"] && window["FUPIN_AREACODE"] !== 'null' ? window["FUPIN_AREACODE"] : '530800000000'
     if (!!~location.href.indexOf('localhost')) {
-      token = 'f465efc24740be414534de715460d6e9'
+      token = '43ac6e0c5e3862ed4f17964c46f8b185'
       fetch.defaults.headers.common['token'] = token;
       this.setState({
         token: token

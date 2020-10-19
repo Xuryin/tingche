@@ -7,6 +7,17 @@ import red  from './red.svg';
 import gray  from './gray.svg';
 import green  from './green.svg';
 
+export const DownImg = () => {
+  return <img src={down} alt=""/>
+}
+
+export const TopImg = () => {
+  return <img src={top} alt=""/>
+}
+
+
 export {
-  down, bottom, director, title, top, red, gray, green
+  bottom, director, title, red, gray, green
 };
+
+
