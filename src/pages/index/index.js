@@ -45,9 +45,8 @@ const LineData  = [
 ]
 
 const StoppingTime = [
-  {title: '导流指示牌', content: '1.A1001,普洱市向东50米'},
-  {title: '故障树', content: '1.A1001,普洱市向东50米'},
-  {title: '导流指示牌', content: '1.A1001,普洱市向东50米'},
+  {title: '导流指示牌', content: '1.A1001,普洱市向东50米', extra: '15个', isOpen: false},
+  {title: '故障树', content: '1.A1001,普洱市向东50米',extra: '2个', isOpen: false},
 ]
 
 class Index extends Component {
@@ -191,5 +190,9 @@ class Index extends Component {
     </div>
   }
 }
+
+
+
+
 
 export default Index

@@ -8,11 +8,11 @@ import gray  from './gray.svg';
 import green  from './green.svg';
 
 export const DownImg = () => {
-  return <img src={down} alt=""/>
+  return <img src={down} alt="" className='down-img'/>
 }
 
 export const TopImg = () => {
-  return <img src={top} alt=""/>
+  return <img src={top} alt="" className='top-img'/>
 }
 
 
