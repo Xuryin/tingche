@@ -10,17 +10,16 @@ class Collapse extends Component {
     }
   }
 
-  onChange = (index) => {
+  onChange = (index,bool) => {
     const { data } = this.props
     let isActive = []
-
-    if ( isActive[index] == index ) {
-      data.forEach((item, index) => {
-        isActive.push( data.length+1 )
-      })
-      console.log(isActive)
+    data.forEach((item, index) => {
+      isActive.push( false)
+    })
+    if (bool) {
+      isActive[index] = false
     } else {
-      isActive[index] = index
+      isActive[index] = true
     }
     this.setState({
       isActive: isActive
@@ -47,12 +46,12 @@ class Collapse extends Component {
       <div className='collapse-content'>
         {data.map((item, index) => (
           <div>
-            <div className='collapse-header' onClick={() => this.onChange(index)}>
+            <div className='collapse-header' onClick={() => this.onChange(index,isActive[index])}>
               <span>{item.title}</span>
               <span className='collapse-extra'>{item.extra}</span>
-              {isActive[index] == index? <DownImg /> : <TopImg/>}
+              {isActive[index] == true? <DownImg /> : <TopImg/>}
             </div>
-            {isActive[index] == index ? <Direction data={item}/> : null}
+            {isActive[index] == true ? <Direction data={item}/> : null}
           </div>
         ))}
       </div>
